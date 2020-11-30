@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal">
+
+
+    <RelativeLayout
+        android:id="@+id/foreground"
+        android:visibility="visible"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/notification_row_timestamp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_marginTop="8dp"
+                android:text="Timestamp"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/notification_row_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_marginTop="2dp"
+                android:text="Message"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="69dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#a9a9a9"/>
+</FrameLayout>

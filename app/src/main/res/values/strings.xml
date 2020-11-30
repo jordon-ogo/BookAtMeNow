@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Book at Me Now</string>
+    <string name="default_title">Title</string>
+
+    <!-- defaults for book rows -->
+    <string name="default_author">Author</string>
+    <string name="default_status">Status</string>
+    <string name="default_isbn">ISBN</string>
+    <string name="default_owner">Owner</string>
+    <string name="default_username">Username</string>
+    <string name="confirm_description">confirm</string>
+    <string name="reject_description">reject</string>
+
+    <!-- filter sort drop down -->
+    <string-array name="sort_array">
+        <item>Title</item>
+        <item>Author</item>
+        <item>ISBN</item>
+    </string-array>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="action_scan_isbn">Scan In</string>
+    <string name="action_select_borrower">Select Borrower</string>
+    <string name="action_pending_requests">Pending Requests</string>
+    <string name="default_current_borrower">Not Borrowed</string>
+
+    <string name="book_status_available">Available</string>
+    <string name="book_status_requested">Requested</string>
+    <string name="book_status_accepted">Accepted</string>
+    <string name="book_status_borrowed">Borrowed</string>
+
+    <string name="action_save_pic">SAVE PIC</string>
+    <string name="action_take_picture">TAKE PICTURE</string>
+    <string name="action_remove_picture">Remove Picture</string>
+    <string name="myBook_save_button">Save</string>
+    <string name="myBook_isbn_hint">ISBN</string>
+    <string name="myBook_remove_button">REMOVE</string>
+    <string name="myBook_location_button">Pickup Location</string>
+    <string name="myBook_receive_button">Receive Return</string>
+    <string name="myBook_unavailable_radiobutton">Unavailable</string>
+
+    <string name="mainActivity_all_books">ALL BOOKS</string>
+    <string name="mainActivity_my_books">MY BOOKS</string>
+    <string name="mainActivity_borrowed">BORROWED</string>
+    <string name="mainActivity_requested">REQUESTED</string>
+    <string name="mainActivity_search">Search</string>
+    <string name="mainActivity_add">Add Book</string>
+    <string name="mainActivity_filter">Filter Books</string>
+    <string name="mainActivity_edit_profile">Edit Profile</string>
+</resources>

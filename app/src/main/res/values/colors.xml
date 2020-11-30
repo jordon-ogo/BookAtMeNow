@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="textColorPrimary">#000000</color>
+    <color name="textColorInverse">#FFFFFF</color>
+    <color name="textColorSecondary">#757575</color>
+    <color name="textColorHint">#9B9B9B</color>
+
+    <color name="colorPrimary">#0277BD</color>
+    <color name="colorPrimaryDark">#105098</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorSecondary">#6200EE</color>
+
+    <color name="buttonSecondary">#BB86FC</color>
+
+    <color name="windowBackground">#FFFFFF</color>
+
+    <color name="confirm">#1DA069</color>
+    <color name="deny">#AA3E3E</color>
+    <color name="mid_way">#F9A825</color>
+    <color name="filter_color">@color/textColorInverse</color>
+    <color name="sort_color">@color/colorPrimaryDark</color>
+</resources>

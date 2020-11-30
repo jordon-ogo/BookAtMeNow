@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground"
+    tools:context=".MyBookActivity">
+
+    <EditText
+        android:id="@+id/myBook_title_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/default_title"
+        android:inputType="textCapWords"
+        android:textColor="@color/textColorPrimary"
+        android:textColorHint="@color/textColorHint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/myBook_author_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/default_author"
+        android:inputType="textPersonName|textCapWords"
+        android:textColor="@color/textColorPrimary"
+        android:textColorHint="@color/textColorHint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myBook_title_edittext" />
+
+    <EditText
+        android:id="@+id/myBook_isbn_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:maxLines="1"
+        android:inputType="text"
+        android:ems="10"
+        android:hint="@string/myBook_isbn_hint"
+        android:textColor="@color/textColorPrimary"
+        android:textColorHint="@color/textColorHint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myBook_author_edittext" />
+
+    <Button
+        android:id="@+id/myBook_scan_button"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="@string/action_scan_isbn"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/myBook_isbn_edittext"
+        app:layout_constraintStart_toEndOf="@+id/myBook_isbn_edittext"
+        app:layout_constraintTop_toTopOf="@+id/myBook_isbn_edittext" />
+
+
+    <ImageView
+        android:id="@+id/myBook_imageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myBook_scan_button"
+        app:layout_constraintBottom_toTopOf="@+id/myBook_pending_request_button"
+        app:layout_constraintStart_toEndOf="@+id/myBook_remove_picture_button"/>
+
+    <Button
+        android:id="@+id/myBook_take_picture_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="160dp"
+        android:minHeight="0dp"
+        android:onClick="takePicture"
+        android:text="@string/action_take_picture"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myBook_isbn_edittext" />
+
+    <Button
+        android:id="@+id/myBook_remove_picture_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:textSize="12sp"
+        android:minHeight="0dp"
+        android:onClick="removeImage"
+        android:text="@string/action_remove_picture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myBook_take_picture_button" />
+
+    <Button
+        android:id="@+id/myBook_pending_request_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        android:minHeight="0dp"
+        android:text="@string/action_pending_requests"
+        app:layout_constraintBottom_toTopOf="@+id/myBook_current_borrower_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myBook_remove_picture_button" />
+
+    <TextView
+        android:id="@+id/myBook_current_borrower_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:textSize="12sp"
+        android:text="@string/default_current_borrower"
+        android:textColor="@color/textColorSecondary"
+        app:layout_constraintTop_toBottomOf="@+id/myBook_pending_request_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/myBook_location_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        android:minHeight="0dp"
+        android:text="@string/myBook_location_button"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintBottom_toTopOf="@+id/myBook_remove_button"
+        app:layout_constraintEnd_toStartOf="@+id/myBook_receive_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myBook_current_borrower_textview" />
+
+    <Button
+        android:id="@+id/myBook_receive_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        android:minHeight="0dp"
+        android:text="@string/myBook_receive_button"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintBottom_toTopOf="@+id/myBook_remove_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/myBook_location_button"
+        app:layout_constraintTop_toBottomOf="@+id/myBook_current_borrower_textview" />
+
+    <Button
+        android:id="@+id/myBook_save_change_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:text="@string/myBook_save_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/myBook_remove_button"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/myBook_remove_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:text="@string/myBook_remove_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/myBook_save_change_button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/myBook_set_status"
+        android:layout_width="112dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/myBook_take_picture_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myBook_isbn_edittext"
+        tools:text="unavailable" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
